@@ -2,6 +2,10 @@
 
 # Tiny Tapeout Chisel Project Template
 
+This template is intended for projects written in the Chisel hardware construction language.
+To learn more about Chisel, visit the [Chisel website](https://www.chisel-lang.org/)
+or read the free [Chisel book](http://www.imm.dtu.dk/~masca/chisel-book.html).
+
 - [Read the documentation for project](docs/info.md)
 
 ## What is Tiny Tapeout?
@@ -12,7 +16,7 @@ To learn more and get started, visit https://tinytapeout.com.
 
 ## Set up your Chisel project
 
-1. Add your Verilog files to the `src` folder.
+1. Add your Chisel files to the `src` folder and below according the `sbt` conventions (`src/main/scala`).
 2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
 3. Edit [docs/info.md](docs/info.md) and add a description of your project.
 4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
