@@ -34,3 +34,4 @@ class ChiselTop() extends Module {
 object ChiselTop extends App {
   emitVerilog(new ChiselTop(), Array("--target-dir", "src"))
 }
+

@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/gustav/Downloads/tinytapeout_wokwi0/src/main/scala/Chisel_filters.scala:67:31: not found: value calculation[0m
+[0m[[0m[31merror[0m] [0m[0m   io.uo_out := Cat(0.U(7.W), calculation(15)) // Output as soon we have recived the full 16bits [0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/gustav/Downloads/tinytapeout_wokwi0/src/main/scala/Chisel_filters.scala:68:24: not found: value calculation[0m
+[0m[[0m[31merror[0m] [0m[0m   filterOutput := Cat(calculation(14,0), 0.U) // Shift next bit up so its ready to be outputted when it arrvies [0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

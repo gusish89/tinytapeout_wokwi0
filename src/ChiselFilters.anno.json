@@ -1,0 +1,17 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"src"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~ChiselFilters|ChiselFilters>io_uo_out",
+    "sources":[
+      "~ChiselFilters|ChiselFilters>io_ui_in"
+    ]
+  }
+]
