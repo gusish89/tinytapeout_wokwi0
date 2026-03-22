@@ -25,6 +25,7 @@ async def test_project(dut):
     # Reset
     dut._log.info("Reset")
     dut.uio_oe.value = 1
+    dut.ena.value = 1
 
     
 

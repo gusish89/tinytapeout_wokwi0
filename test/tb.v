@@ -1,9 +1,6 @@
 `default_nettype none
 `timescale 1ns / 1ps
 
-/* This testbench just instantiates the module and makes some convenient wires
-   that can be driven / tested by the cocotb test.py.
-*/
 module tb ();
 
 initial begin
@@ -11,9 +8,6 @@ initial begin
     $dumpvars(0, tb);
 end
 
-
-
-  // Wire up the inputs and outputs:
   reg clk;
   reg rst_n;
   reg ena;
@@ -23,16 +17,16 @@ end
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 
-  
-  // Replace tt_um_example with your module name:
-  ChiselFilters  uut (
-      .clock      (clk),
-      .reset      (~rst_n),
-      .io_ui_in   (ui_in),
-      .io_uo_out  (uo_out),
-      .io_uio_in  (uio_in),
-      .io_uio_out (uio_out),
-      .io_uio_oe  (uio_oe)
+  // Instantiate TT top wrapper (works for RTL and gate-level)
+  tt_um_chisel_template uut (
+      .ui_in   (ui_in),
+      .uo_out  (uo_out),
+      .uio_in  (uio_in),
+      .uio_out (uio_out),
+      .uio_oe  (uio_oe),
+      .ena     (ena),
+      .clk     (clk),
+      .rst_n   (rst_n)
   );
 
 endmodule
