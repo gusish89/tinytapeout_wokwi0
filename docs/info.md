@@ -9,11 +9,10 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The project processes a mono WAV audio signal sampled at 44.1 kHz. It receives the audio samples and passes them through either a low-pass or a high-pass filter, producing a filtered output signal.
 
 ## How to test
-
-Explain how to use your project
+Provide the input audio stream one bit at a time on pin 0. Once the first 16-bit sample has been received, the design starts producing the corresponding filtered output. This means there is an initial delay of 15 clock cycles before valid output appears.
 
 ## External hardware
 
