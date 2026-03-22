@@ -23,7 +23,7 @@ module tt_um_example (
     wire reset = !rst_n;
     // Just wrap the Chisel generated Verilog
 
-    ChiselTop ChiselTop(.clock(clk),
+    ChiselFilters ChiselFilters(.clock(clk),
       .reset(reset),
       .io_ui_in(ui_in),
       .io_uo_out(uo_out),
