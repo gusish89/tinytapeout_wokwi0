@@ -5,7 +5,7 @@
 
 `define default_netname none
 
-module tt_um_example (
+module tt_um_chisel_template (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -23,7 +23,7 @@ module tt_um_example (
     wire reset = !rst_n;
     // Just wrap the Chisel generated Verilog
 
-    ChiselFilters ChiselFilters(.clock(clk),
+    ChiselFilters u_chiselFilters(.clock(clk),
       .reset(reset),
       .io_ui_in(ui_in),
       .io_uo_out(uo_out),
