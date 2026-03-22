@@ -29,6 +29,9 @@ class ChiselFilters() extends Module {
   io.uio_oe  := 0.U
   io.uo_out:= 0.U
 
+  val unusedInputs = io.ui_in(7, 2).orR | io.uio_in.orR
+  dontTouch(unusedInputs)
+
   // io.uio_oe := 0.U
   // io.uo_out  := 0.U
   // io.uio_out := 0.U
